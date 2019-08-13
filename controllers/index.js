@@ -11,7 +11,7 @@ angular.module("app").controller("mainCtrl", function ($scope, $http, $timeout, 
     $scope.showSendBtn = true;
     $scope.getCrimeStageList = function () {
         $http({
-            url: 'http://api.zandylyq.kz/v1/judgment',
+            url: 'https://api.zandylyq.kz/v1/judgment',
             method: 'GET'
         }).then(function (value) {
             console.log(value.data);
@@ -26,7 +26,7 @@ angular.module("app").controller("mainCtrl", function ($scope, $http, $timeout, 
     $scope.singleDemo.crime = '';
     $scope.getCrimeList = function () {
         $http({
-            url: 'http://api.zandylyq.kz/v1/judgment/',
+            url: 'https://api.zandylyq.kz/v1/judgment/',
             method: 'GET'
         }).then(function (data) {
             console.log(data);
@@ -131,7 +131,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
         $scope.objForChart = sendBodyObj;
         $scope.loader = true;
         $http({
-            url: 'http://api.zandylyq.kz/v1/judgment/request/?&nocache=2',
+            url: 'https://api.zandylyq.kz/v1/judgment/request/?&nocache=2',
             method: 'POST',
             data: sendBodyObj,
             cache: false,
@@ -186,7 +186,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
 
         $http({
             method: 'POST',
-            url: 'http://api.zandylyq.kz/v1/stat/vid-nakaz/',
+            url: 'https://api.zandylyq.kz/v1/stat/vid-nakaz/',
             data: object,
             cache: false,
             contentType: false,
@@ -325,7 +325,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
 
         $http({
             method: 'POST',
-            url: 'http://api.zandylyq.kz/v1/stat/vid-nakaz/',
+            url: 'https://api.zandylyq.kz/v1/stat/vid-nakaz/',
             data: object,
             cache: false,
             contentType: false,
@@ -512,7 +512,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
 
                 $http({
                     method: 'POST',
-                    url: 'http://api.zandylyq.kz/v1/stat/vid-nakaz-list/',
+                    url: 'https://api.zandylyq.kz/v1/stat/vid-nakaz-list/',
                     data: tableObj,
                     cache: false,
                     contentType: false,
@@ -544,7 +544,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
         console.log(item);
         $http({
             method: 'GET',
-            url: 'http://api.zandylyq.kz/v1/file/download/' + item.file_id,
+            url: 'https://api.zandylyq.kz/v1/file/download/' + item.file_id,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
             }
