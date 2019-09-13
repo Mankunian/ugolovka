@@ -303,6 +303,8 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
 
     $scope.lineChart = function () {
 
+        $scope.showImg = true;
+
         var object = {
             "article_id": $scope.objForChart.article_id,
             "article24_id": $scope.objForChart.article24_id,
@@ -339,7 +341,9 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
         }).then(function (value) {
             console.log(value);
             $scope.data = value.data.result;
-            if ($scope.data === ''){$scope.noData = "Нет данных!"}
+            if ($scope.data === '') {
+                $scope.noData = "Нет данных!"
+            }
             $scope.tooltip = value.data.result;
             $scope.typeOfPunishment = [];
             $scope.cntLic = [];
@@ -549,7 +553,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
                 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
             }
         }).success(function (response) {
-            var file = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+            var file = new Blob([response], {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
             // saveAs(file, 'filename.docx');
         }).error(function (data) {
 
