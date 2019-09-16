@@ -598,3 +598,13 @@ tbody tr{
     height: 100%;
     width: 100%;
 }
+
+.printPdf{
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}

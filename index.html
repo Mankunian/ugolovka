@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!--uiSelect-->
     <link rel="stylesheet" href="css/ui-select/select2.css">
@@ -455,6 +456,8 @@
             </div>
         </div>
         <div class="modal-footer">
+<!--            <button class="btn btn-sm printPdf"><i class="fa fa-print"></i> Скачать PDF</button>-->
+            <a class="btn btn-sm printPdf" href="{{typeMessage.file_url}}">Скачать PDF</a>
             <button class="btn btn-danger" ng-click="cancel()">Закрыть</button>
             <!--<button class="btn btn-primary" id="btnPrint">Печать</button>-->
         </div>
