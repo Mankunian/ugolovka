@@ -369,6 +369,15 @@ ul {
     /*text-transform: uppercase;*/
 }
 
+ul.menuModal{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    /*text-transform: uppercase;*/
+}
+
 li {
     float: left;
 }
@@ -464,7 +473,7 @@ li a:hover {
 }
 
 .screen{
-    background-image: url("../img/8.png");
+    /*background-image: url("../img/8.png");*/
     width: 100%;
     height: 75vh;
     background-repeat: no-repeat;
@@ -582,4 +591,10 @@ tbody tr{
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
+}
+
+
+#myChart{
+    height: 100%;
+    width: 100%;
 }

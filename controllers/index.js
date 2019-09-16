@@ -131,7 +131,8 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
         $scope.objForChart = sendBodyObj;
         $scope.loader = true;
         $http({
-            url: 'https://api.zandylyq.kz/v1/judgment/request/?&nocache=2',
+            // url: 'https://api.zandylyq.kz/v1/judgment/request/?&nocache=2',
+            url: 'https://api.zandylyq.kz/v1/judgment/request',
             method: 'POST',
             data: sendBodyObj,
             cache: false,
@@ -492,8 +493,8 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
             zingchart.render({
                 id: 'myChart',
                 data: myConfig,
-                height: 447,
-                width: 810
+                height: '100%',
+                width: '100%'
             });
 
 

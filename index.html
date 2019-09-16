@@ -45,19 +45,26 @@
     </style>
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(53897173, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/53897173" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/53897173" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 
 
@@ -255,7 +262,8 @@
                     </div>
                     <div class="col-sm-12 text-center">
                         <br>
-                        <a style="color: #fff;" class="btn-home" href="https://www.zandylyq.kz/"><span class="glyphicon glyphicon-menu-left"></span> Назад к сайту</a>
+                        <a style="color: #fff;" class="btn-home" href="https://www.zandylyq.kz/"><span
+                                class="glyphicon glyphicon-menu-left"></span> Назад к сайту</a>
 
                     </div>
                 </div>
@@ -287,84 +295,101 @@
                 {{typeMessage.error_message}}
             </div>
 
-            <div ng-if="typeMessage.result">
-                <!--<span ng-bind-html="typeMessage.result">{{typeMessage.result}}</span>-->
+            <!--<div ng-if="typeMessage.result">
                 <span ng-bind-html="typeMessage.result | trusted"></span>
-            </div>
+            </div>-->
 
 
-            <!--            New Design-->
+            <!-- New Design-->
+            <div ng-if="typeMessage.result">
+                <ul class="menuModal">
+                    <li><a href="#require">Требования УК</a></li>
+                    <li><a href="#analysis">Анализ Данных</a></li>
+                    <li><a href="#punishment">Мера Наказания</a></li>
+                    <li><a href="#recom">Рекомендации</a></li>
+                    <li><a href="#links">Ссылки</a></li>
+                </ul>
 
-            <!--<ul>
-                <li><a href="#home">Требования УК</a></li>
-                <li><a href="#news">Анализ Данных</a></li>
-                <li><a href="#contact">Мера Наказания</a></li>
-                <li><a href="#about">Рекомендации</a></li>
-                <li><a href="#links">Ссылки</a></li>
-            </ul>
+
+                <br>
 
 
-            <br>
+                <div id="require" class="penal-code">
+                    <span ng-bind-html="typeMessage.result.text_1 | trusted"></span>
 
-            <div class="penal-code">
-                <h3>Требования уголовного кодекса</h3>
-                <p>Размер наказания по статье 99 ч.2 Уголов ного кодекса РК</p>
-                <div style="background: #CCCCCC; padding: 7px">
-                    <span>лишение свободы от 15 до 20 лет либо пожизненное лишение свободы, с конфиксацией имущества или без таковой</span>
+
+                    <!--<h3>Требования уголовного кодекса</h3>
+                    <p>Размер наказания по статье 99 ч.2 Уголов ного кодекса РК</p>
+                    <div style="background: #CCCCCC; padding: 7px">
+                        <span>лишение свободы от 15 до 20 лет либо пожизненное лишение свободы, с конфиксацией имущества или без таковой</span>
+                    </div>-->
                 </div>
-            </div>
-            <br>
+                <br>
 
-            <div class="backAnalysis row">
-                <div class="analysis">
-                    <h3>Анализ данных</h3>
-                    <p>Анализ поступивших данных показал:
-                        Лицу, при указанных обстоятельствах, могут быть назначены следующие виды и сроки наказаний:</p>
+                <div class="backAnalysis row">
+                    <div id="analysis" class="analysis">
+                        <!--                    <span ng-bind-html="typeMessage.result.text_2 | trusted"></span>-->
+                        <!--<h3>Анализ данных</h3>
+                        <p>Анализ поступивших данных показал:
+                            Лицу, при указанных обстоятельствах, могут быть назначены следующие виды и сроки наказаний:</p>-->
+                        <span ng-bind-html="typeMessage.result.text_2 | trusted"></span>
 
-                    <div class="col-sm-12" style="padding: 0 0 15px">
-                        <div class="col-sm-6" style="padding: 0 15px">
-                            <h4 style="font-weight: 800">Основная мера наказания</h4>
-                            <div class="zx">Лишение свободы на срок 15 лет</div><br>
-                        </div>
-                        <div class="col-sm-6" style="background: #ffffff; padding: 0 15px">
-                            <h4 style="font-weight: 800">Дополнительная мера наказания</h4>
-                            <p>Конфискация имущества может быть назначена при наличии имущества добытого преступным путем, либо приобретенного на средства, добытые преступным путем</p>
+                        <div id="punishment" class="col-sm-12" style="padding: 0 0 15px">
+                            <div class="col-sm-6" style="padding: 0 15px">
+                                <!--<h4 style="font-weight: 800">Основная мера наказания</h4>
+                                <div class="zx">Лишение свободы на срок 15 лет</div><br>-->
+                                <span ng-bind-html="typeMessage.result.text_3 | trusted"></span><br>
+                            </div>
+                            <div class="col-sm-6 addPunishment" style="background: #ffffff; padding: 5px 15px; border-radius: 2px">
+                                <span ng-bind-html="typeMessage.result.text_4 | trusted"></span>
+                                <!--<h4 style="font-weight: 800">Дополнительная мера наказания</h4>
+                                <p>Конфискация имущества может быть назначена при наличии имущества добытого преступным
+                                    путем, либо приобретенного на средства, добытые преступным путем</p>-->
+                            </div>
                         </div>
                     </div>
+
+                    <br>
+
                 </div>
 
                 <br>
 
+                <div id="recom" class="recommend">
+                    <!--<h3>Рекомендации</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                        leap into electronic typesetting, remaining essentially unchanged.</p>-->
+                    <span ng-bind-html="typeMessage.result.text_5 | trusted"></span>
+                </div>
+                <br>
+
+                <div class="note">
+                    <span ng-bind-html="typeMessage.result.text_6 | trusted"></span>
+                </div>
+                <br>
+
+                <div ng-if="typeMessage.result.text_7" id="links" class="link">
+                    <h3>Ссылки</h3>
+                    <!--<a href="#">См: Нормативное постановление Верховного Суда Республики Казахстан от 8 декабря 2017 года №
+                        11 "О некоторых вопросах судебной практики по применению законодательства террористических и
+                        экстремистских преступлениях"</a>-->
+                    <span ng-bind-html="typeMessage.result.text_7 | trusted"></span>
+                </div>
+                <br>
+
+
+                <!--New Design-->
+
+
+                <br ng-if="typeMessage.result.text_7">
+                <!--<button ng-if="typeMessage.result" ng-click="showChart(item)" type="button" class="btn btn-primary">Показать аналитику</button>-->
+                <button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
+                        class="btn btn-primary btnAnalytic">Показать
+                    аналитику
+                </button>
             </div>
-
-            <br>
-
-            <div class="recommend">
-                <h3>Рекомендации</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </div>
-            <br>
-
-            <div class="note">
-                лицо, выполнившие все условия поцессуального соглашения, может быть освобождено от уголовной ответственности
-            </div>
-            <br>
-
-            <div class="link">
-                <h3>Ссылки</h3>
-                <a href="#">См: Нормативное постановление Верховного Суда Республики Казахстан от 8 декабря 2017 года № 11 "О некоторых вопросах судебной практики по применению законодательства террористических и экстремистских преступлениях"</a>
-            </div>
-            <br>-->
-
-
-            <!--            New Design-->
-
-
-            <!--<button ng-if="typeMessage.result" ng-click="showChart(item)" type="button" class="btn btn-primary">Показать аналитику</button>-->
-            <button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
-                    class="btn btn-primary btnAnalytic">Показать
-                аналитику
-            </button>
             <br>
             <span>
                 <div ng-if="noData" class="alert alert-danger" role="alert">
@@ -375,7 +400,7 @@
             <!--<div style="margin: 10px 0" ng-if="!noData" id='pieChart'></div>-->
             <br>
             <div class="col-sm-12 screen" ng-if="showImg">
-                <div style="margin: 35px 22px" id='myChart'></div>
+                <div id='myChart'></div>
             </div>
 
 
@@ -396,7 +421,7 @@
                         <!--<th><input type="text" class="form-control" placeholder="First Name" disabled></th>-->
                         <!--<th><input type="text" class="form-control" placeholder="Last Name" disabled></th>-->
                         <!--<th><input type="text" class="form-control" placeholder="Username" disabled></th>-->
-                        <th>№ УД</th>
+                        <th style="border-bottom: 2px solid yellow">№ УД</th>
                         <th>ФИО</th>
                         <th>Дата приговора</th>
                         <th>Наименование суда</th>
@@ -413,7 +438,6 @@
                                 <a ng-if="item.file_url" href="{{item.file_url}}">{{item.Family}} {{item.Name}}
                                     {{item.LName}}
                                 </a>
-
 
 
                                 <p ng-if="!item.file_url">{{item.Family}} {{item.Name}}
