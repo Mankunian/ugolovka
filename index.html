@@ -88,6 +88,11 @@
             padding: 6px 12px;
             display: inline-block;
         }
+
+        .navbar-default{
+            background: none;
+        }
+
     </style>
 
 
@@ -277,16 +282,46 @@
 
     <div class="modal-content modal-xl">
         <div class="modal-header">
-            <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+            <button style="margin: 6px" type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
             <!--            <h4 class="modal-title" id="exampleModalLabel">Результат анализа</h4>-->
-            <ul class="menuModal">
+            <!--<ul class="menuModal">
                 <li><a href="#require">Требования УК</a></li>
                 <li><a href="#analysis">Анализ Данных</a></li>
                 <li><a href="#punishment">Мера Наказания</a></li>
                 <li><a href="#recom">Рекомендации</a></li>
                 <li><a href="#links">Ссылки</a></li>
                 <li><a ng-click="lineChart(item)" href="#analytic">Аналитика</a></li>
-            </ul>
+            </ul>-->
+
+
+            <nav class="navbar navbar-default">
+                <!-- Контейнер (определяет ширину Navbar) -->
+                <div class="container-fluid">
+                    <!-- Заголовок -->
+                    <div class="navbar-header">
+                        <!-- Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar) -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Бренд или название сайта (отображается в левой части меню) -->
+<!--                        <a class="navbar-brand" href="#">Brand</a>-->
+                    </div>
+                    <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
+                    <div class="collapse navbar-collapse" id="navbar-main">
+                        <!-- Содержимое основной части -->
+                        <ul class="nav navbar-nav">
+                            <li><a href="#require">Требования УК</a></li>
+                            <li><a href="#analysis">Анализ Данных</a></li>
+                            <li><a href="#punishment">Мера Наказания</a></li>
+                            <li><a href="#recom">Рекомендации</a></li>
+                            <li><a href="#links">Ссылки</a></li>
+                            <li><a ng-click="lineChart(item)" href="#analytic">Аналитика</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
 
         <div class="modal-body" id="printThis">
@@ -337,18 +372,19 @@
                         <span ng-bind-html="typeMessage.result.text_2 | trusted"></span>
 
                         <div id="punishment" class="col-sm-12" style="padding: 0 0 15px">
-                            <div class="col-sm-6 list-style" style="padding: 0 15px">
+                            <div class="col-sm-6 col-xs-12 list-style" style="padding: 0 15px">
                                 <!--<h4 style="font-weight: 800">Основная мера наказания</h4>
                                 <div class="zx">Лишение свободы на срок 15 лет</div><br>-->
                                 <span ng-bind-html="typeMessage.result.text_3 | trusted"></span><br>
                             </div>
-                            <div ng-if="typeMessage.result.text_4" class="col-sm-6 addPunishment"
+                            <div ng-if="typeMessage.result.text_4" class="col-sm-6 col-xs-12 addPunishment"
                                  style="background: #ffffff; padding: 5px 15px; border-radius: 2px">
                                 <span ng-bind-html="typeMessage.result.text_4 | trusted"></span>
                                 <!--<h4 style="font-weight: 800">Дополнительная мера наказания</h4>
                                 <p>Конфискация имущества может быть назначена при наличии имущества добытого преступным
                                     путем, либо приобретенного на средства, добытые преступным путем</p>-->
                             </div>
+                            <br>
                         </div>
                     </div>
 
@@ -405,7 +441,7 @@
             </div>
 
 
-            <div ng-show="showTable" class="panel panel-primary filterable">
+            <div style="overflow: scroll" ng-show="showTable" class="col-sm-12 panel panel-primary filterable">
                 <!-- <div class="panel-heading">
                      <h3 class="panel-title">Список дел</h3>
                      <div class="pull-right"></div>
