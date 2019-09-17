@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+<!--    <link rel="stylesheet" href="css/font-awesome.css">-->
 
     <!--uiSelect-->
     <link rel="stylesheet" href="css/ui-select/select2.css">
@@ -277,8 +277,16 @@
 
     <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="exampleModalLabel">Результат анализа</h4>
+<!--            <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>-->
+<!--            <h4 class="modal-title" id="exampleModalLabel">Результат анализа</h4>-->
+            <ul class="menuModal">
+                <li><a href="#require">Требования УК</a></li>
+                <li><a href="#analysis">Анализ Данных</a></li>
+                <li><a href="#punishment">Мера Наказания</a></li>
+                <li><a href="#recom">Рекомендации</a></li>
+                <li><a href="#links">Ссылки</a></li>
+                <li><a ng-click="lineChart(item)" href="#analytic">Аналитика</a></li>
+            </ul>
         </div>
 
         <div class="modal-body" id="printThis">
@@ -303,13 +311,7 @@
 
             <!-- New Design-->
             <div ng-if="typeMessage.result">
-                <ul class="menuModal">
-                    <li><a href="#require">Требования УК</a></li>
-                    <li><a href="#analysis">Анализ Данных</a></li>
-                    <li><a href="#punishment">Мера Наказания</a></li>
-                    <li><a href="#recom">Рекомендации</a></li>
-                    <li><a href="#links">Ссылки</a></li>
-                </ul>
+
 
 
                 <br>
@@ -386,12 +388,11 @@
 
                 <br ng-if="typeMessage.result.text_7">
                 <!--<button ng-if="typeMessage.result" ng-click="showChart(item)" type="button" class="btn btn-primary">Показать аналитику</button>-->
-                <button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
+                <!--<button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
                         class="btn btn-primary btnAnalytic">Показать
                     аналитику
-                </button>
+                </button>-->
             </div>
-            <br>
             <span>
                 <div ng-if="noData" class="alert alert-danger" role="alert">
                 <strong>{{noData}}</strong>
@@ -399,8 +400,8 @@
             </span>
 
             <!--<div style="margin: 10px 0" ng-if="!noData" id='pieChart'></div>-->
-            <br>
-            <div class="col-sm-12 screen" ng-if="showImg">
+
+            <div id="analytic" class="col-sm-12 screen" ng-if="showImg">
                 <div id='myChart'></div>
             </div>
 

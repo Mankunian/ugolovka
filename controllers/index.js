@@ -221,7 +221,7 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
 
                 var myConfig = {
                     type: "pie",
-                    backgroundColor: "#003849",
+                    backgroundColor: "#000",
                     // "background-color": "#003849",
                     plot: {
                         borderColor: "#fff",
@@ -370,19 +370,22 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
             zingchart.THEME = "classic";
             var myConfig = {
                 "type": "line",
-                "background-color": "#003849",
+                // "background-color": "#003849",
+                "background-color": "#000",
                 "utc": true,
                 "title": {
                     "y": "7px",
                     "text": "Вид и сроки наказания",
-                    "background-color": "#003849",
+                    // "background-color": "#003849",
+                    "background-color": "#000",
                     "font-size": "24px",
                     "font-color": "white",
                     "height": "25px"
                 },
                 "plotarea": {
                     "margin": "20% 8% 14% 12%",
-                    "background-color": "#003849"
+                    // "background-color": "#003849"
+                    "background-color": "#000"
                 },
                 "legend": {
                     "layout": "float",
@@ -471,20 +474,23 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
                     // "values": [15, 25, 10, 5, 38, 30, 11, 15, 20, 22, 17, 28, 39, 40, 27],
                     "values": $scope.cntLic,
                     "text": "Кол-во лиц",
-                    "line-color": "#ff0000",
+                    "line-color": "#EEA200",
+                    // "line-color": "#ff0000",
                     "legend-marker": {
                         "type": "circle",
                         "size": 5,
-                        "background-color": "#007790",
+                        "background-color": "#EEA200",
                         "border-width": 1,
                         "shadow": 0,
-                        "border-color": "#69dbf1"
+                        "border-color": "#EEA200"
                     },
                     "marker": {
-                        "background-color": "#ffff00",
+                        // "background-color": "#ffff00",
+                        "background-color": "#AC0F16",
                         "border-width": 1,
                         "shadow": 0,
-                        "border-color": "#ffff00"
+                        // "border-color": "#ffff00"
+                        "border-color": "#AC0F16"
                     }
                 }
                 ]
