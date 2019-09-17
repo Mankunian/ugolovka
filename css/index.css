@@ -362,6 +362,7 @@ input[type=checkbox]:checked + label:before {
 .list-style ul{
     overflow: visible;
     list-style: inside;
+    padding-bottom: 80px;
 }
 
 
