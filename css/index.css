@@ -1,6 +1,6 @@
-/*@import 'https://fonts.googleapis.com/css?family=Open+Sans';*/
-/*@import url(../css/font-awesome.css);*/
-/*@import "https://fonts.googleapis.com/css?family=Varela+Round";*/
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import "https://fonts.googleapis.com/css?family=Varela+Round";
 
 
 body {
@@ -371,6 +371,7 @@ ul {
 
 ul.menuModal{
     list-style-type: none;
+    width: fit-content;
     margin: 0;
     padding: 0;
     overflow: hidden;

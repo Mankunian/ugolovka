@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
-<!--    <link rel="stylesheet" href="css/font-awesome.css">-->
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!--uiSelect-->
     <link rel="stylesheet" href="css/ui-select/select2.css">
@@ -277,8 +277,8 @@
 
     <div class="modal-content">
         <div class="modal-header">
-<!--            <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>-->
-<!--            <h4 class="modal-title" id="exampleModalLabel">Результат анализа</h4>-->
+            <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+            <!--            <h4 class="modal-title" id="exampleModalLabel">Результат анализа</h4>-->
             <ul class="menuModal">
                 <li><a href="#require">Требования УК</a></li>
                 <li><a href="#analysis">Анализ Данных</a></li>
@@ -313,7 +313,6 @@
             <div ng-if="typeMessage.result">
 
 
-
                 <br>
 
 
@@ -343,7 +342,8 @@
                                 <div class="zx">Лишение свободы на срок 15 лет</div><br>-->
                                 <span ng-bind-html="typeMessage.result.text_3 | trusted"></span><br>
                             </div>
-                            <div class="col-sm-6 addPunishment" style="background: #ffffff; padding: 5px 15px; border-radius: 2px">
+                            <div ng-if="typeMessage.result.text_4" class="col-sm-6 addPunishment"
+                                 style="background: #ffffff; padding: 5px 15px; border-radius: 2px">
                                 <span ng-bind-html="typeMessage.result.text_4 | trusted"></span>
                                 <!--<h4 style="font-weight: 800">Дополнительная мера наказания</h4>
                                 <p>Конфискация имущества может быть назначена при наличии имущества добытого преступным
@@ -374,25 +374,19 @@
                 <br>
 
                 <div ng-if="typeMessage.result.text_7" id="links" class="link">
-<!--                    <h3>Ссылки</h3>-->
-                    <!--<a href="#">См: Нормативное постановление Верховного Суда Республики Казахстан от 8 декабря 2017 года №
-                        11 "О некоторых вопросах судебной практики по применению законодательства террористических и
-                        экстремистских преступлениях"</a>-->
                     <span ng-bind-html="typeMessage.result.text_7 | trusted"></span>
                 </div>
                 <br>
 
 
-                <!--New Design-->
-
-
                 <br ng-if="typeMessage.result.text_7">
                 <!--<button ng-if="typeMessage.result" ng-click="showChart(item)" type="button" class="btn btn-primary">Показать аналитику</button>-->
-                <!--<button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
+                <button ng-if="typeMessage.result" ng-click="lineChart(item)" type="button"
                         class="btn btn-primary btnAnalytic">Показать
                     аналитику
-                </button>-->
+                </button>
             </div>
+            <br>
             <span>
                 <div ng-if="noData" class="alert alert-danger" role="alert">
                 <strong>{{noData}}</strong>
@@ -456,8 +450,9 @@
                 </table>
             </div>
         </div>
+        <br>
         <div class="modal-footer">
-<!--            <button class="btn btn-sm printPdf"><i class="fa fa-print"></i> Скачать PDF</button>-->
+            <!--            <button class="btn btn-sm printPdf"><i class="fa fa-print"></i> Скачать PDF</button>-->
             <a class="btn btn-sm printPdf" href="{{typeMessage.file_url}}">Скачать PDF</a>
             <button class="btn btn-danger" ng-click="cancel()">Закрыть</button>
             <!--<button class="btn btn-primary" id="btnPrint">Печать</button>-->

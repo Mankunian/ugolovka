@@ -486,11 +486,11 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
                     },
                     "marker": {
                         // "background-color": "#ffff00",
-                        "background-color": "#AC0F16",
+                        "background-color": "#EEA200",
                         "border-width": 1,
                         "shadow": 0,
                         // "border-color": "#ffff00"
-                        "border-color": "#AC0F16"
+                        "border-color": "#EEA200"
                     }
                 }
                 ]
