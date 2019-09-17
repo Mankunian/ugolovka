@@ -361,16 +361,16 @@ input[type=checkbox]:checked + label:before {
 
 .list-style ul{
     overflow: visible;
-    list-style: inside;
+    /*list-style: inside;*/
     padding-bottom: 80px;
 }
 
 
- ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+ .addPunishment ul {
+    list-style-type: disc;
+    /*margin: 0;*/
+    padding: 0 5px;
+    /*overflow: hidden;*/
 }
 
 ul.menuModal{
