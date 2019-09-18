@@ -34,6 +34,7 @@
     <!--FileSaver-->
     <script src="Scripts/FileSaver.js"></script>
 
+
     <style>
         .select2 > .select2-choice.ui-select-match {
             /* Because of the inclusion of Bootstrap */
@@ -70,6 +71,12 @@
 
 
     <script src="Scripts/zingchart.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('forms-ext', {types: 'date'});
+        webshims.polyfill('forms forms-ext');
+    </script>
     <style>
         .zc-ref {
             display: none;
@@ -91,6 +98,7 @@
 
         .navbar-default{
             background: none;
+            width: fit-content;
         }
 
     </style>
@@ -346,11 +354,6 @@
 
             <!-- New Design-->
             <div ng-if="typeMessage.result">
-
-
-                <br>
-
-
                 <div id="require" class="penal-code">
                     <span ng-bind-html="typeMessage.result.text_1 | trusted"></span>
 
