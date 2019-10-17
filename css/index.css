@@ -654,3 +654,36 @@ tbody tr{
     }
 }
 
+
+.select2 > .select2-choice.ui-select-match {
+    /* Because of the inclusion of Bootstrap */
+    height: 29px;
+}
+
+.selectize-control > .selectize-dropdown {
+    top: 36px;
+}
+
+
+.zc-ref {
+    display: none;
+}
+
+zing-grid[loading] {
+    height: 800px;
+}
+
+.background {
+    margin: 0;
+}
+
+.alert {
+    width: fit-content;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+.navbar-default{
+    background: none;
+    width: fit-content;
+}
