@@ -147,9 +147,9 @@ var modalContent = function ($scope, $uibModalInstance, $http, value, article, s
         }).then(function (data) {
             $scope.data = data;
             $scope.typeMessage = data.data;
-            if ($scope.typeMessage.error_message) {
+            /*if ($scope.typeMessage.error_message) {
                 $scope.typeMessage.error_message = 'Пожалуйста, заполните поля где отмечены знаком *'
-            }
+            }*/
             $scope.showClearBtn = true;
             $scope.showSendBtn = false;
             $scope.loader = false;
