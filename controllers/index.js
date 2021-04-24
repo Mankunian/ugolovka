@@ -106,6 +106,7 @@ angular.module("app").controller("mainCtrl", function ($scope, $http, $timeout, 
 
 
 var modalContent = function ($scope, $uibModalInstance, $http, value, article, stage) {
+    console.log(value.dateFrom);
 
     var d = value.dateFrom;
     var mm = ((d.getMonth() < +1) < 10 ? '0' : '') + (d.getMonth() + 1);
